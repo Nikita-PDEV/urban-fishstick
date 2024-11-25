@@ -1,0 +1,14 @@
+{% extends "default.html" %}  
+
+{% block content %}  
+    <h2>Новости</h2>  
+    <ul>  
+        {% for article in news %}  
+            <li>  
+                <h3><a href="{{ url_for('news_detail', news_id=article.id) }}">{{ article.title }}</a></h3>  
+                <p>Дата: {{ article.date.strftime('%d.%m.%Y') }}</p>  
+                <p>{{ article.content[:20] }}...</p>  
+            </li>  
+        {% endfor %}  
+    </ul>  
+{% endblock %}

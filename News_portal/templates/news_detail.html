@@ -1,0 +1,7 @@
+{% extends "default.html" %}  
+
+{% block content %}  
+    <h2>Статья: {{ article.title }}</h2>  
+    <p>Дата публикации: {{ date }}</p>  
+    <p>{{ article.content }}</p>  
+{% endblock %}
